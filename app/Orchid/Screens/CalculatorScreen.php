@@ -8,6 +8,7 @@ use Orchid\Screen\Fields\Label;
 use Orchid\Screen\Actions\Button;
 use Illuminate\Http\Request;
 use App\Services\Calculator;
+use App\Models\User;
 
 class CalculatorScreen extends Screen
 {
