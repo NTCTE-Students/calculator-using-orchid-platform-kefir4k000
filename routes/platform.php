@@ -19,6 +19,9 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
+use App\Orchid\Screens\CalculatorScreen;
+use App\Orchid\Screens\PhysicalQuantitiesScreen;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -77,7 +80,7 @@ Route::screen('roles/create', RoleEditScreen::class)
         ->parent('platform.systems.roles')
         ->push(__('Create'), route('platform.systems.roles.create')));
 
-// Platform > System > Roles
+// Platform > System > RolesCalculatorScreen
 Route::screen('roles', RoleListScreen::class)
     ->name('platform.systems.roles')
     ->breadcrumbs(fn (Trail $trail) => $trail
@@ -100,5 +103,8 @@ Route::screen('/examples/layouts', ExampleLayoutsScreen::class)->name('platform.
 Route::screen('/examples/grid', ExampleGridScreen::class)->name('platform.example.grid');
 Route::screen('/examples/charts', ExampleChartsScreen::class)->name('platform.example.charts');
 Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.example.cards');
+Route::screen('/PhysicalQuantitiesScreen', PhysicalQuantitiesScreen::class)->name('platform.physicalcalculator');
+
+Route::screen('/CalculatorScreen', CalculatorScreen::class)->name('platform.calculator');
 
 //Route::screen('idea', Idea::class, 'platform.screens.idea');
